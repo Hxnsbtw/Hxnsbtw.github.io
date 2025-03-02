@@ -1,28 +1,307 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página</title>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mi pagina web</title>
+
+    <meta name="description" content="Valor de la description" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Portafolio de un tecnologo de sisemas" />
+    <meta
+      property="og:description"
+      content="Portafolio de Gabriel Perez con mas de 5 anos de experiencia"
+    />
+
+    <meta property="og:image" content="imagenes/photo.jpg" />
+    <meta property="og:image:alt" content="Fotografia de Gabriel " />
+
+    <!-- SEO -->
+
+    <link rel="alternate" href="http://google.com/en" hreflang="es-CO" />
+    <link rel="canonical" href="http://google.com" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09f" />
+
+    <link rel="icon" type="image/jpg" href="img/Logogym.jpg"/>
+
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>HANS ALBERTO MERA FLOREZ</h1>
-    </header>
 
-    <main>
-        <p>¡Hola! Soy un estudiante apasionado por la tecnología y el desarrollo web. Me encanta aprender nuevas habilidades y crear proyectos innovadores.</p>
+    <!-- <style>
+      body {
+        background: rgb(0, 170, 255);
+      }
+      h1 {
+        color: red;
+      }
+    </style> -->
 
-        <div>
-            <a href="https://github.com/Hxnsbtw" target="_blank">Visita mi perfil de GitHub</a>
-        </div>
-        <div>
-        <img src="img/Logogym.jpg" alt="Foto de perfil" >
-        </div>
-        <button id="saludoBtn">Haz clic aquí</button>
-    </main>
-
+    <script>
+      console.log('Hola mundo');
+    </script>
+  </head>
+  <body>
+    <h1>HANS ALBERTO MERA FLOREZ</h1>
+    <p id="description">¡Hola! Soy un estudiante <strong>apasionado por la tecnología y el desarrollo web.</strong> Me encanta aprender nuevas habilidades y crear proyectos innovadores.</p>
+    <div>
+        <a href="https://github.com/Hxnsbtw" target="_blank">Visita mi perfil de GitHub</a>
+    </div>
+    <div>
+    <img style="border-radius: 50%; margin-top: 10px;" src="img/Logogym.jpg" alt="Foto de perfil" >
+    </div>
+    <button id="saludoBtn">Haz clic aquí</button>
     <script src="js/script.js"></script>
-</body>
+    <p>
+      fsdfdsf
+      <span>Hola soy un span</span>
+      <span>Hola soy un span</span>
+      <span>Hola soy un span</span>
+    </p>
+    <span>Hola soy un span</span>
+
+    <!-- <video 
+      src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4"
+      controls
+      muted
+      loop
+      autoplay
+      ></video> -->
+      <!-- poster="images/photo.jpg" -->
+
+      <!-- <audio 
+        src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4"
+        controls
+        loop
+        autoplay
+      ></audio> -->
+
+    <h2 id="experience" >Experiencia</h2>
+    
+    <ul type="square">
+      <li id="uno" class="list-item" >Uniajc - 2024</li>
+      <li id="2" class="list-item" >Globant - 2022</li>
+      <li id="3" class="list-item" >SENA - 2021</li>
+    </ul>
+    
+    <img style="border-radius: 50%;"
+      id="imagen1"
+      src="img/Logogym.jpg" 
+      title="Photo-image"
+      width="100"
+      height="100"
+      alt="Foto de Gabriel"
+    >
+
+    <h2>Proyectos realizados</h2>
+    <aside id="tech">
+      <header>
+        <label for="name">
+          <h3>Mis tecnologías favoritas<h3>
+        </label>
+      </header>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+      </ol>
+    </aside>
+    
+    <section>
+      <article>
+        <header>
+          <h4>Sitio Web Corporativo</h4>
+        </header>
+        <p>
+          Desarrollo de un sitio web corporativo con una intérfaz amigable y
+          moderna.
+        </p>
+        <div>Tecnologías utilizadas: HTML, CSS, JavaScript</div>
+      </article>
+
+
+      <article>
+        <header>
+          <h4>Aplicación Web de E-commerce</h4></header>
+        <p>
+          Creación de una plataforma de comercio electrónico para una tienda local.
+        </p>
+        <div>Tecnologias utilizadas: React, Node.js, MongoDB</div>
+      </article>
+      <article>
+        <header>
+          <h4>Aplicacion Movil de Rastreo de Fitnes</h4>
+        </header>
+        <p>
+          Desarrollo de una aplicación móvil para rastrear actividades físicas y
+          hábitos alimentación.
+        </p>
+        <div>Tecnologias utilizadas: <strong>Flutter, Firebase</strong></div>
+      </article>
+    </section>
+
+    <br>
+
+    <table border="1" height="100%" style="border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Head 1</th>
+          <th>Head 2</th>
+          <th>Head 3</th>
+          <th>Head 4</th>
+          <th>Head 5</th>
+          <th>Head 6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cell 1</td>
+          <td>Cell 2</td>
+          <td>Cell 3</td>
+          <td>Cell 4</td>
+          <td>Cell 5</td>
+          <td>Cell 6</td>
+        </tr>
+        <tr>
+          <td>Cell 1</td>
+          <td>Cell 2</td>
+          <td colspan="2">Cell 3</td>
+          <td>Cell 4</td>
+          <td>Cell 5</td>
+        </tr>
+        <tr>
+          <td>Cell 1</td>
+          <td>Cell 2</td>
+          <td rowspan="2">Cell 3</td>
+          <td colspan="2" rowspan="2">Celda combinada</td>
+        </tr>
+        <tr>
+          <td>Cell 1</td>
+          <td>Cell 2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section>
+      <h2>Preguntas frecuentes</h2>
+
+      <details open>
+        <summary>Que estudios tienes?</summary>
+        <p>Puedes enviarme un correo a</p>
+      </details>
+      <details>
+        <summary>Cuales son tus hobbies?</summary>
+        <p>Puedes enviarme un correo a</p>
+      </details>
+      <details>
+        <summary>Cual es tu lenguaje favorito?</summary>
+        <p>Puedes enviarme un correo a</p>
+      </details>
+
+    </section>
+
+    <dialog id="dialog">
+      <h1>Sabes que puedes abrir una modal asi?</h1>
+      <p>Y es totalmente nativo!</p>
+      <button id="hide">Cerrar modal</button>
+    </dialog>
+    <button id="show">Mostrar Dialogo</button>
+
+    <script>
+      window.show.addEventListener('click', () => {
+        window.dialog.showModal();
+      });
+      window.hide.addEventListener('click', () => {
+        window.dialog.close();
+      });
+    </script>
+
+    <section>
+
+      <h2>Formulario contacto</h2>
+
+      <form method="post" action="/">
+        <fieldset>
+          <legend>Informacion personal</legend>
+          <label>Nombre:
+            <input type="text" size="50" id="name" placeholder="Digita tu nombre" required />
+          </label>
+          
+          <div>
+            <label
+              >Email:
+
+              <input type="email" placeholder="email@gmail.com" required />
+            </label>
+          </div>
+
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Informacion adicional</legend>
+          <label>Telefono:
+            <input type="tel" id="name" placeholder="+57 312+12230+0021" pattern="[0-9]{9}" required />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros</legend>
+          <div>
+            <label>Por que deseas contactarme?</label>
+            <select name="why" id="why">
+              <option value="Oferta">Oferta laboral</option>
+              <option value="Proyecto">Proyecto</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="terms">Aceptas los términos?</label>
+            <input type="checkbox" name="terms" id="terms" required />
+          </div>
+
+
+          <div>
+            <datalist id="languages">
+              <option value="JavaScript"></option>
+              <option value="Python"></option>
+              <option value="Java"></option>
+              <option value="C#"></option>
+              <option value="html"></option>
+              <option value="css"></option>
+              <option value="C++"></option>
+              <option value="C--"></option>
+              <option value="CSharp"></option>
+            </datalist>
+            <label>
+              Con que lenguaje quieres que te ayude?
+              <input list="languages" name="languages" />
+            </label>
+          </div>
+
+        </fieldset>
+
+        <!-- <input type="submit" value="Enviar"> -->
+        <button>Enviar</button>
+
+      </form>
+
+    </section>
+
+    <footer>
+      <p>HOLA FOOTER</p>
+      <p>HOLA FOOTER</p>
+      Copyright &copy; 2024 - Mi Portafolio
+      <a href="#tech">enlace</a>
+      <a href="mailto:gabriel@gmail.com">Enviame un correo</a>
+      <a href="tel:+312888899">Llamar por teléfono</a>
+      <a href="whatsapp://send?text=Hola Gabriel">Llamar por teléfono</a>
+    </footer>
+    
+
+  </body>
 </html>
