@@ -18,9 +18,30 @@ function renderizarTareas() {
             <span>${tarea.texto}</span>
             <span class="fecha">${new Date(tarea.fecha).toLocaleDateString()}</span>
             <button onclick="eliminarTarea(${index})">🗑️</button>
-           
-        `;
+            `
+            ;
         listaTareas.appendChild(tareaDiv);
+    });
+}
+
+// Función para editar tareas
+function habilitarEdicion() {
+    listaTareas.addEventListener('dblclick', (e) => {
+        if (e.target.tagName === 'SPAN') {
+            const tareaDiv = e.target.parentElement;
+            const index = Array.from(listaTareas.children).indexOf(tareaDiv);
+           
+            // Editar texto
+            const nuevoTexto = prompt('Editar tarea:', tareas[index].texto);
+            // Editar fecha
+            const nuevaFecha = prompt('Editar fecha (YYYY-MM-DD):', tareas[index].fecha);
+ 
+            if (nuevoTexto !== null && nuevoTexto.trim() !== '' && nuevaFecha !== null && nuevaFecha.trim()) {
+                tareas[index].texto = nuevoTexto.trim();
+                tareas[index].fecha = nuevaFecha.trim();
+                renderizarTareas();
+            }
+        }
     });
 }
 
@@ -50,3 +71,4 @@ window.eliminarTarea = (index) => {
 
 // Inicialización
 renderizarTareas();
+habilitarEdicion();
