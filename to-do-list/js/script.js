@@ -39,6 +39,7 @@ function habilitarEdicion() {
             if (nuevoTexto !== null && nuevoTexto.trim() !== '' && nuevaFecha !== null && nuevaFecha.trim()) {
                 tareas[index].texto = nuevoTexto.trim();
                 tareas[index].fecha = nuevaFecha.trim();
+                guardarEnLocalStorage();
                 renderizarTareas();
             }
         }
@@ -58,6 +59,7 @@ agregarBtn.addEventListener('click', () => {
         });
         tareaInput.value = '';
         fechaInput.value = '';
+        guardarEnLocalStorage();
         renderizarTareas();
     }
 });
@@ -65,14 +67,21 @@ agregarBtn.addEventListener('click', () => {
 
 window.toggleCompletada = (index) => {
     tareas[index].completada = !tareas[index].completada;
+    guardarEnLocalStorage();
     renderizarTareas();
 };
 
 // Funciones globales
 window.eliminarTarea = (index) => {
     tareas.splice(index, 1);
+    guardarEnLocalStorage();
     renderizarTareas();
 };
+
+// Guardar en localStorage
+function guardarEnLocalStorage() {
+    localStorage.setItem('tareas', JSON.stringify(tareas));
+}
 
 
 // Inicialización
