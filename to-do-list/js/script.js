@@ -18,8 +18,8 @@ function renderizarTareas() {
             <span>${tarea.texto}</span>
             <span class="fecha">${new Date(tarea.fecha).toLocaleDateString()}</span>
             <button onclick="eliminarTarea(${index})">🗑️</button>
-            `
-            ;
+            <button onclick="toggleCompletada(${index})">${tarea.completada ? '❌' : '✓'}</button>
+            `;
         listaTareas.appendChild(tareaDiv);
     });
 }
@@ -61,6 +61,12 @@ agregarBtn.addEventListener('click', () => {
         renderizarTareas();
     }
 });
+//funcion tarea completa
+
+window.toggleCompletada = (index) => {
+    tareas[index].completada = !tareas[index].completada;
+    renderizarTareas();
+};
 
 // Funciones globales
 window.eliminarTarea = (index) => {
